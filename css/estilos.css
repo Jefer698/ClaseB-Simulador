@@ -1,0 +1,44 @@
+body[data-tema="claro"] {
+  background: #f9f9f9;
+  color: #222;
+}
+
+body[data-tema="oscuro"] {
+  background: #121212;
+  color: #eee;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.imagen-pregunta {
+  max-width: 100%;
+  margin: 1em 0;
+  border-radius: 8px;
+}
+
+.instruccion {
+  font-style: italic;
+  margin-bottom: 1em;
+  color: #666;
+}
+
+.navegacion {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.correcto {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrecto {
+  color: red;
+  font-weight: bold;
+}

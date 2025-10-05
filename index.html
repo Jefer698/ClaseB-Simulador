@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Clase B</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body data-tema="claro">
+  <header>
+    <h1>Simulador Clase B</h1>
+    <button onclick="cambiarTema()">🌗 Cambiar tema</button>
+  </header>
+
+  <main>
+    <div id="temporizador"></div>
+    <div id="pregunta-container"></div>
+
+    <div class="navegacion">
+      <button onclick="anteriorPregunta()">Anterior</button>
+      <button onclick="siguientePregunta()">Siguiente</button>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
