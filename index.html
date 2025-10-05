@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Simulador Clase B</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body data-tema="claro">
   <header>
     <h1>Simulador Clase B</h1>
-    <button onclick="cambiarTema()">🌗 Cambiar tema</button>
+    <button onclick="cambiarTema()">Cambiar tema</button>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
   </header>
 
-  <main>
-    <div id="temporizador"></div>
-    <div id="pregunta-container"></div>
+  <div id="login-container" style="display:none; text-align:center; margin-top:2em">
+    <h2>Iniciar sesión</h2>
+    <input type="text" id="usuario" placeholder="Nombre de usuario">
+    <br><br>
+    <button onclick="iniciarSesion()">Entrar</button>
+  </div>
 
-    <div class="navegacion">
-      <button onclick="anteriorPregunta()">Anterior</button>
-      <button onclick="siguientePregunta()">Siguiente</button>
-    </div>
-  </main>
+  <div id="modo-container" style="display:none; text-align:center; margin-top:2em">
+    <h2>Selecciona el modo</h2>
+    <button onclick="iniciarPractica()">Modo Práctica</button>
+    <br><br>
+    <button onclick="iniciarExamen()">Modo Examen</button>
+    <br><br>
+    <button onclick="verEstadisticas()">Ver estadísticas</button>
+  </div>
+
+  <div id="pregunta-container" style="display:none; margin-top:2em"></div>
+
+  <div id="temporizador" style="text-align:center; font-weight:bold; margin-top:1em"></div>
+
+  <div style="text-align:center; margin-top:1em">
+    <button id="btnFinalizarExamen" onclick="mostrarResultadosFinales()" style="display:none">Finalizar examen</button>
+  </div>
+
+  <div id="resultado-container" style="display:none; text-align:center; margin-top:2em"></div>
+
+  <div id="estadisticas-container" style="display:none; text-align:center; margin-top:2em">
+    <h2>Estadísticas de Usuarios</h2>
+    <div id="usuariosBotones"></div>
+    <div id="graficoUsuario" style="margin-top:2em"></div>
+    <button onclick="volverAlModo()">Volver</button>
+  </div>
 
   <script src="js/app.js"></script>
 </body>
