@@ -11,7 +11,6 @@ fetch("preguntas_con_respuestas.json")
   .then((res) => res.json())
   .then((data) => {
     preguntas = data;
-    document.getElementById("login-container").style.display = "block";
   });
 
 function iniciarSesion() {
