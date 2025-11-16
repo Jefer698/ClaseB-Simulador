@@ -3,7 +3,7 @@ let indiceActual = 0;
 let respuestasCorrectas = 0;
 let respuestasIncorrectas = 0;
 let modo = "";
-let tiempoRestante = 2700;
+let tiempoRestante = 20700;
 let temporizadorInterval;
 let usuarioActual = "";
 
