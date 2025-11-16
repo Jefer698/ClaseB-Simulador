@@ -66,6 +66,10 @@ function renderPregunta(index) {
   else if (cantidad > 2) instruccion = "Marque la(s) respuesta(s) correcta(s):";
 
   const preguntaHTML = `
+  <div class="navegacion">
+    <button onclick="anteriorPregunta()">Anterior</button>
+    <button onclick="siguientePregunta()">Siguiente</button>
+  </div>
     <div style="text-align:center">
       <h2>${p.texto}</h2>
       <p class="instruccion">${instruccion}</p>
@@ -90,10 +94,6 @@ function renderPregunta(index) {
     </form>
     <button id="btnResponder" onclick="evaluar(${index})" disabled style="margin-top:1em">Responder</button>
     <div id="feedback"></div>
-    <div class="navegacion">
-      <button onclick="anteriorPregunta()">Anterior</button>
-      <button onclick="siguientePregunta()">Siguiente</button>
-    </div>
     <div style="text-align:center; margin-top:1em">
       <button onclick="volverAlModo()">Volver al menú</button>
     </div>
